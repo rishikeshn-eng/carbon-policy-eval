@@ -1,5 +1,7 @@
 # carbon-policy-eval
 
+**Live demo:** [https://rishikeshn-eng.github.io/carbon-policy-eval/](https://rishikeshn-eng.github.io/carbon-policy-eval/) runs the whole pipeline in your browser (bring your own Gemini key for the model calls).
+
 Do language models actually know India's carbon market? And when a question
 gets the facts wrong, do they correct it or answer inside it?
 

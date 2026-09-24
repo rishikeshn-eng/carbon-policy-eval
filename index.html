@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carbon policy eval: does the model know India's carbon market?</title>
+<meta name="description" content="40 sourced questions on India's Carbon Credit Trading Scheme, including 15 with a false premise. Take the quiz yourself, or run the Inspect benchmark live on the Gemini API from your browser.">
+<meta property="og:title" content="Carbon policy eval: does the model know India's carbon market?">
+<meta property="og:description" content="40 sourced questions on India's Carbon Credit Trading Scheme, including 15 with a false premise. Take the quiz yourself, or run the Inspect benchmark live on the Gemini API from your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>:root{--bg:#08090c;--panel:#101218;--panel2:#171a22;--tx:#eceef3;--dim:#8a91a2;--line:rgba(255,255,255,.08);
+--acc:#ffd166;--blue:#7aa2f7;--red:#f7768e;--green:#9ece6a;--violet:#bb9af7;--r:10px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55;font-size:15px}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 16px 90px}
+header.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:18px}
+h1{font-family:"Instrument Serif",serif;font-size:clamp(30px,5vw,42px);font-weight:400;letter-spacing:-.01em;line-height:1.1}
+h1 em{font-style:italic;color:var(--acc)}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:28px;margin-bottom:6px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px}
+.eyebrow,.mono{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:12.5px;color:var(--tx);background:var(--panel)}
+.pill:hover{border-color:var(--blue);text-decoration:none}
+.status{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.12em;padding:3px 8px;border-radius:4px;background:rgba(255,209,102,.12);color:var(--acc);text-transform:uppercase}
+.lede{margin:26px 0 8px;max-width:720px;font-family:"Instrument Serif",serif;font-size:clamp(19px,2.6vw,23px);line-height:1.45;color:#c9cede}
+.lede b{color:var(--acc);font-weight:400}
+section{margin-top:46px}
+.sub{color:var(--dim);max-width:720px;margin-bottom:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.stat .v{font-family:"Instrument Serif",serif;font-size:36px;line-height:1}
+.stat .k{color:var(--dim);font-size:12.5px;margin-top:6px}
+.steps{counter-reset:s;display:grid;gap:10px}
+.steps>div{counter-increment:s;position:relative;padding:14px 14px 14px 52px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r)}
+.steps>div:before{content:counter(s,decimal-leading-zero);position:absolute;left:16px;top:14px;font-family:"JetBrains Mono";color:var(--acc);font-size:13px}
+.steps p{color:var(--dim);font-size:13.5px}
+code,.code{font-family:"JetBrains Mono",monospace;font-size:12.5px}
+pre{font-family:"JetBrains Mono",monospace;font-size:12px;background:#0c0e13;border:1px solid var(--line);border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-word;color:#c9cede;max-height:340px;overflow:auto}
+input,select,textarea{font:inherit;color:var(--tx);background:#0c0e13;border:1px solid var(--line);border-radius:8px;padding:9px 11px;width:100%}
+textarea{min-height:110px;resize:vertical;font-size:14px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+label{display:block;font-size:12.5px;color:var(--dim);margin-bottom:5px}
+button,.btn{font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;border:1px solid transparent;border-radius:8px;padding:9px 15px;background:var(--acc);color:#15120a}
+button.ghost{background:transparent;color:var(--tx);border-color:var(--line)}
+button.ghost:hover{border-color:var(--blue)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+.row>*{flex:1 1 160px}
+.row>button{flex:0 1 auto;max-width:100%}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:16px;overflow-x:auto}
+.tabs button{background:none;color:var(--dim);border:none;border-bottom:2px solid transparent;border-radius:0;padding:10px 14px;white-space:nowrap}
+.tabs button.on{color:var(--tx);border-bottom-color:var(--acc)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;font-weight:500;color:var(--dim);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.click{cursor:pointer}tr.click:hover td{background:var(--panel2)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--panel)}
+.tag{display:inline-block;font-family:"JetBrains Mono";font-size:10.5px;padding:2px 7px;border-radius:4px;background:var(--panel2);color:var(--dim);white-space:nowrap}
+.t-good{background:rgba(158,206,106,.14);color:var(--green)}
+.t-bad{background:rgba(247,118,142,.14);color:var(--red)}
+.t-mid{background:rgba(255,209,102,.14);color:var(--acc)}
+.t-blue{background:rgba(122,162,247,.14);color:var(--blue)}
+.muted{color:var(--dim)}.small{font-size:12.5px}
+.bar{height:10px;border-radius:5px;background:var(--panel2);overflow:hidden;position:relative}
+.bar>i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.bar>b{position:absolute;top:-3px;bottom:-3px;border-left:2px solid #fff;border-right:2px solid #fff;opacity:.55}
+.log{font-family:"JetBrains Mono";font-size:11.5px;color:var(--dim);max-height:220px;overflow:auto;background:#0c0e13;border:1px solid var(--line);border-radius:8px;padding:10px}
+.log div{padding:1px 0}
+.keybox{border:1px dashed rgba(255,209,102,.35);background:rgba(255,209,102,.04)}
+.note{font-size:12.5px;color:var(--dim);border-left:2px solid var(--acc);padding-left:10px}
+.hide{display:none!important}
+footer{margin-top:70px;padding-top:18px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+mark{background:rgba(255,209,102,.25);color:var(--tx);border-radius:3px;padding:0 2px}
+</style>
+<script>// Shared demo kit: Gemini calls from the browser, key panel, stats helpers.
+// The API key lives only in this tab's memory (optionally sessionStorage) and is sent only to Google.
+const Kit = (() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const pct = (x, d = 0) => (x == null || isNaN(x)) ? "—" : (100 * x).toFixed(d) + "%";
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  const state = { key: "", model: "gemini-2.5-flash", calls: 0, stop: false, last: 0 };
+  try { state.key = sessionStorage.getItem("gkey") || ""; } catch (e) {}
+
+  function keyPanel(el, opts = {}) {
+    el.classList.add("card", "keybox");
+    el.innerHTML = `
+      <div class="row">
+        <div style="flex:2 1 260px"><label>Gemini API key <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">get a free one ↗</a></label>
+          <input type="password" id="kit-key" placeholder="AIza…" autocomplete="off" value="${esc(state.key)}"></div>
+        <div><label>Model</label><select id="kit-model">
+          <option value="gemini-2.5-flash">gemini-2.5-flash</option>
+          <option value="gemini-2.5-flash-lite">gemini-2.5-flash-lite</option>
+          <option value="gemini-2.5-pro">gemini-2.5-pro</option>
+          <option value="gemini-2.0-flash">gemini-2.0-flash</option></select></div>
+        <label style="flex:0 0 auto;display:flex;gap:6px;align-items:center;margin:0 0 10px"><input type="checkbox" id="kit-remember" style="width:auto"> remember for this tab</label>
+      </div>
+      <p class="small muted" style="margin-top:10px">${opts.note || "Your key never leaves this page except in requests to Google's Gemini API. Nothing is stored on a server."}</p>`;
+    const k = $("#kit-key", el), m = $("#kit-model", el), rem = $("#kit-remember", el);
+    m.value = state.model;
+    rem.checked = !!state.key;
+    const sync = () => {
+      state.key = k.value.trim(); state.model = m.value;
+      try { rem.checked && state.key ? sessionStorage.setItem("gkey", state.key) : sessionStorage.removeItem("gkey"); } catch (e) {}
+    };
+    k.addEventListener("input", sync); m.addEventListener("change", sync); rem.addEventListener("change", sync);
+  }
+  const hasKey = () => !!state.key;
+
+  async function gemini(messages, { temperature = 0, model, json = false, system } = {}) {
+    if (!state.key) throw new Error("Add a Gemini API key first.");
+    const mdl = model || state.model;
+    const body = {
+      contents: messages.map(m => ({ role: m.role === "model" ? "model" : "user", parts: [{ text: m.text }] })),
+      generationConfig: { temperature }
+    };
+    if (json) body.generationConfig.responseMimeType = "application/json";
+    if (system) body.systemInstruction = { parts: [{ text: system }] };
+    for (let attempt = 0; attempt < 5; attempt++) {
+      const gap = Date.now() - state.last; if (gap < 1100) await sleep(1100 - gap);
+      state.last = Date.now();
+      let r;
+      try {
+        r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${mdl}:generateContent`, {
+          method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": state.key }, body: JSON.stringify(body) });
+      } catch (e) { await sleep(1500 * 2 ** attempt); continue; }
+      if (r.ok) {
+        state.calls++; bump();
+        const j = await r.json();
+        const c = j.candidates && j.candidates[0];
+        const txt = c && c.content && c.content.parts ? c.content.parts.map(p => p.text || "").join("") : "";
+        if (!txt && c && c.finishReason) return `[no text: ${c.finishReason}]`;
+        if (!txt && j.promptFeedback && j.promptFeedback.blockReason) return `[blocked: ${j.promptFeedback.blockReason}]`;
+        return txt.trim();
+      }
+      const t = await r.text();
+      if (r.status === 400 || r.status === 401 || r.status === 403) {
+        let msg = t; try { msg = JSON.parse(t).error.message; } catch (e) {}
+        throw new Error(`Gemini ${r.status}: ${msg}`);
+      }
+      await sleep((r.status === 429 ? 6000 : 1500) * 2 ** attempt);
+    }
+    throw new Error("Gemini kept failing after 5 retries (rate limit?). Try again in a minute or lower the item count.");
+  }
+
+  async function embed(texts, { task = "RETRIEVAL_DOCUMENT" } = {}) {
+    if (!state.key) throw new Error("Add a Gemini API key first.");
+    const out = [];
+    for (let i = 0; i < texts.length; i += 50) {
+      const batch = texts.slice(i, i + 50);
+      const r = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:batchEmbedContents", {
+        method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": state.key },
+        body: JSON.stringify({ requests: batch.map(t => ({ model: "models/gemini-embedding-001", content: { parts: [{ text: t }] }, taskType: task, outputDimensionality: 768 })) }) });
+      if (!r.ok) { let m = await r.text(); try { m = JSON.parse(m).error.message; } catch (e) {} throw new Error("Embedding error: " + m); }
+      const j = await r.json(); state.calls++; bump();
+      j.embeddings.forEach(e => out.push(e.values));
+    }
+    return out;
+  }
+
+  function bump() { $$("[data-kit-calls]").forEach(e => e.textContent = state.calls); }
+
+  const FINAL_RE = /final answer\s*[:\-]\s*(.+)/gi;
+  function extractFinal(text) {
+    const m = [...String(text || "").matchAll(FINAL_RE)];
+    return m.length ? m[m.length - 1][1].trim().replace(/^[*`. ]+|[*`. ]+$/g, "") : null;
+  }
+
+  // seeded RNG so bootstrap CIs are reproducible
+  function rng(seed = 1) { let s = seed >>> 0 || 1; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 4294967296); }
+  // groups: array of per-question units; fn(sample) -> number. Resamples units, returns [lo, hi].
+  function bootstrap(groups, fn, n = 2000, seed = 0) {
+    const r = rng(seed + 7), stats = [];
+    if (!groups.length) return [NaN, NaN];
+    for (let b = 0; b < n; b++) {
+      const s = []; for (let i = 0; i < groups.length; i++) s.push(groups[Math.floor(r() * groups.length)]);
+      const v = fn(s); if (!isNaN(v)) stats.push(v);
+    }
+    stats.sort((a, b) => a - b);
+    return stats.length ? [stats[Math.floor(.025 * stats.length)], stats[Math.floor(.975 * stats.length)]] : [NaN, NaN];
+  }
+
+  // horizontal bar with optional CI whiskers, value in 0..1 (or signed with min/max)
+  function bar(v, { lo, hi, color = "var(--acc)", min = 0, max = 1 } = {}) {
+    const f = x => Math.max(0, Math.min(100, (x - min) / (max - min) * 100));
+    const w = isNaN(v) ? 0 : f(v);
+    const ci = (lo != null && !isNaN(lo)) ? `<b style="left:${f(lo)}%;width:${Math.max(0.5, f(hi) - f(lo))}%"></b>` : "";
+    return `<div class="bar"><i style="width:${w}%;background:${color}"></i>${ci}</div>`;
+  }
+
+  function download(name, text, type = "application/json") {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  const jsonl = rows => rows.map(r => JSON.stringify(r)).join("\n") + "\n";
+
+  function logger(el) {
+    return (msg, cls = "") => { const d = document.createElement("div"); d.className = cls; d.textContent = msg; el.appendChild(d); el.scrollTop = el.scrollHeight; };
+  }
+
+  function tabs(root) {
+    const btns = $$(".tabs button", root);
+    btns.forEach(b => b.addEventListener("click", () => {
+      btns.forEach(x => x.classList.toggle("on", x === b));
+      $$("[data-pane]", root).forEach(p => p.classList.toggle("hide", p.dataset.pane !== b.dataset.tab));
+    }));
+  }
+
+  return { $, $$, esc, pct, sleep, state, keyPanel, hasKey, gemini, embed, extractFinal, bootstrap, rng, bar, download, jsonl, logger, tabs };
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+<style>
+.quiz{position:relative}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.qtext{font-family:"Instrument Serif",serif;font-size:clamp(20px,3vw,25px);line-height:1.35;margin:4px 0 16px}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.choice button{background:var(--panel2);color:var(--tx);border:1px solid var(--line);text-align:left;font-weight:500;padding:11px 13px;line-height:1.35}
+.choice button small{display:block;color:var(--dim);font-weight:400;font-size:12px;margin-top:2px}
+.choice button.on{border-color:var(--acc);background:rgba(255,209,102,.08)}
+.choice button.on:disabled{opacity:1}
+.reveal{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.ref{background:#0c0e13;border:1px solid var(--line);border-radius:8px;padding:12px;margin:8px 0 12px;font-size:14px}
+.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grades button{background:var(--panel2);color:var(--tx);border:1px solid var(--line);text-align:left;font-weight:600;padding:10px 12px;line-height:1.35}
+.grades button small{display:block;color:var(--dim);font-weight:400;font-size:12px;margin-top:3px}
+.grades button:hover{border-color:var(--blue)}
+.verdict{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:14px}
+.v-good{background:rgba(158,206,106,.1);border:1px solid rgba(158,206,106,.3)}
+.v-bad{background:rgba(247,118,142,.1);border:1px solid rgba(247,118,142,.3)}
+.v-mid{background:rgba(255,209,102,.08);border:1px solid rgba(255,209,102,.3)}
+.prog{height:4px;background:var(--panel2);border-radius:2px;overflow:hidden;margin-bottom:14px}
+.prog i{display:block;height:100%;background:var(--acc);transition:width .2s}
+.fp{color:var(--red)}
+td.q{min-width:240px}
+@media (max-width:560px){.choice,.grades{grid-template-columns:1fr}}
+</style>
+
+<header class="top">
+  <div>
+    <div class="eyebrow">AI policy evals · carbon-policy-eval</div>
+    <h1>Does the model know India's carbon market, or <em>invent</em> one?</h1>
+  </div>
+  <div class="links">
+    <a class="pill" href="https://github.com/rishikeshn-eng/carbon-policy-eval">Code ↗</a>
+    <a class="pill" href="#quiz">Take the quiz ↓</a>
+    <a class="pill" href="#run">Run it live ↓</a>
+  </div>
+</header>
+
+<p class="lede">India's compliance carbon market was notified in June 2023 and set its first binding targets in 2025. Models saw little of it, and much of what they saw was draft material. Ask one <b>which SEBI circular governs carbon credit trading</b> and a good answer says SEBI doesn't regulate it. A bad one cites a circular that doesn't exist.</p>
+<p class="small muted"><span class="status">Live · bring your own key</span> &nbsp;<span class="status" style="background:rgba(158,206,106,.12);color:var(--green)">Quiz · no key needed</span> &nbsp;40 sourced questions · 25 factual · 15 false premise · graded C / P / I</p>
+
+<section>
+  <h2>Two tasks, two failures</h2>
+  <p class="sub">The benchmark is two Inspect tasks over one dataset about the Carbon Credit Trading Scheme (CCTS) 2023 and the Greenhouse Gases Emission Intensity Target Rules 2025. They exist separately because a model can do well on facts and still write a detailed, confident answer to a question built on a wrong fact. In policy work the second failure costs more: it produces plausible analysis that a busy reader will not check.</p>
+  <div class="grid g2">
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px">ccts_factual · 25 items</div><h3>Does it know the scheme?</h3><p class="small muted">Who administers the market (BEE), who runs the registry (Grid-India), who regulates trading (CERC), the baseline year (FY 2023-24), the first four sectors, the gases covered. Correct means stating the key fact in the reference.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px">ccts_false_premise · 15 items</div><h3>Does it push back?</h3><p class="small muted">Each item takes a real fact and swaps one detail for a common confusion: SEBI for CERC, 2005 for FY 2023-24, 2050 for 2070, absolute caps for intensity targets, the power sector for aluminium, cement, chlor-alkali and pulp &amp; paper. Correct means rejecting the premise <i>and</i> giving the right fact.</p></div>
+  </div>
+  <div class="steps" style="margin-top:14px">
+    <div><h3>Answer under a system prompt that invites pushback</h3><p>The model is told to say so first if a question contains an incorrect assumption. That makes premise acceptance a stricter test: it was explicitly given permission to object and still didn't. <a href="#" data-show="sys">Show the system prompt</a></p></div>
+    <div><h3>Grade with a model, against a sourced reference</h3><p>A grader model sees the question, the reference and the answer, never the system prompt, and ends with <code>GRADE: C</code>, <code>P</code> or <code>I</code>. The two tasks use different rubrics. <a href="#" data-show="fact">Factual rubric</a> · <a href="#" data-show="prem">False-premise rubric</a></p></div>
+    <div><h3>Caveats after the fact still count as accepting</h3><p>The false-premise rubric grades I if the answer works inside the premise "even if it adds a caveat later". A reader skimming for the answer takes the confident first paragraph and stops, so a buried correction doesn't protect them.</p></div>
+    <div><h3>Summarise</h3><p>C = 1, P = 0.5, I = 0. Mean score per task with a bootstrap 95% CI, the <b>premise acceptance rate</b> (share of false-premise items graded I, the headline number), and scores by topic to show where knowledge is thin. Ungradable replies are dropped, as in <code>summarize.py</code>.</p></div>
+  </div>
+  <pre id="proto" class="hide" style="margin-top:12px"></pre>
+</section>
+
+<section id="quiz">
+  <h2>Take the quiz yourself</h2>
+  <p class="sub">Same questions, same rubric, no API key. The deck mixes factual and false-premise items and doesn't tell you which is which. For each one, decide whether to answer it or challenge it, write a line, then grade yourself against the reference using the grader's own rubric. Answering a false-premise question as asked is graded I automatically, because that is the rule the model is held to.</p>
+  <div class="card quiz" id="qz"></div>
+</section>
+
+<section id="run">
+  <h2>Run it live</h2>
+  <p class="sub">The protocol from <code>ccts_eval.py</code>, run from your browser: two calls per question, one to answer and one to grade. By default the grader is the model being tested, which is what Inspect does when no grader is given. Pick a different grader to avoid a model marking its own work; see <a href="https://github.com/rishikeshn-eng/judge-drift">judge-drift</a> for how much that choice alone can move a score.</p>
+  <div id="key"></div>
+  <div class="card" style="margin-top:14px">
+    <div class="row">
+      <div><label>Tasks</label><select id="tasks"><option value="both">Both tasks</option><option value="factual">ccts_factual only</option><option value="false_premise">ccts_false_premise only</option></select></div>
+      <div><label>Questions per task <span id="nlab"></span></label><input type="range" id="n" min="1" max="25" value="6"></div>
+      <div><label>Grader</label><select id="grader"><option value="">Same as the tested model</option><option>gemini-2.5-pro</option><option>gemini-2.5-flash</option><option>gemini-2.5-flash-lite</option><option>gemini-2.0-flash</option></select></div>
+      <div><label>Order</label><select id="order"><option value="seq">As listed</option><option value="shuffle">Shuffled</option></select></div>
+      <button id="go">Run</button><button id="stop" class="ghost" disabled>Stop</button>
+    </div>
+    <p class="small muted" style="margin-top:10px">Cost: 2 calls per question. The false-premise task has 15 items, so it stops there. Both calls use temperature 1.0, Gemini's default, since the Inspect task sets none. API calls this session: <b data-kit-calls>0</b></p>
+  </div>
+  <div class="grid g4" style="margin-top:14px" id="stats"></div>
+  <div class="card" style="margin-top:14px">
+    <h3>Score by task</h3>
+    <div id="table" class="small muted">Run the eval to fill this in.</div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <h3>By topic <span class="muted small">(weakest first)</span></h3>
+    <div id="topics" class="small muted">Nothing yet.</div>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div><h3>Live log</h3><div class="log" id="log"></div></div>
+    <div><h3>Samples <span class="muted small">(click a row for the answer and the grader's reasoning)</span></h3><div class="tbl" style="max-height:260px;overflow:auto"><table id="trials"><thead><tr><th>ID</th><th>Topic</th><th>Grade</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+  <pre id="detail" class="hide" style="margin-top:12px"></pre>
+  <div class="row" style="margin-top:12px"><button class="ghost" id="dl" disabled>Download raw JSONL</button></div>
+  <p class="small muted" style="margin-top:8px">One row per sample with the fields <code>summarize.py</code> pulls from each Inspect log (<code>model</code>, <code>task</code>, <code>id</code>, <code>topic</code>, <code>grade</code>), plus the answer and the grader's full output. <code>summarize.py</code> itself reads Inspect <code>.eval</code> logs, so use <code>inspect eval</code> for a run you want to keep in that format.</p>
+</section>
+
+<section>
+  <h2>The dataset</h2>
+  <p class="sub">Every row links the source it was checked against. Some are secondary (ICAP, PwC, PIB summaries) rather than Gazette text, and the scheme is still moving: new sectors were added in January 2026. Rows reflect the CCTS as of September 2026. If a fact has changed, the row is what needs fixing, because the dataset is the experiment.</p>
+  <div class="row" style="margin-bottom:10px"><div style="flex:0 1 220px"><select id="dsf"><option value="">All 40 items</option><option value="factual">Factual (25)</option><option value="false_premise">False premise (15)</option></select></div></div>
+  <div class="tbl"><table id="ds"><thead><tr><th>ID</th><th>Topic</th><th>Question</th><th>Reference</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section>
+  <h2>Before trusting a score</h2>
+  <div class="grid g3">
+    <div class="card"><h3>40 items is small</h3><p class="small muted">Enough to show the method and catch large gaps. Not enough to rank two similar models. The CIs say so; read them.</p></div>
+    <div class="card"><h3>The grader makes mistakes too</h3><p class="small muted">An LLM grader is a second source of error. Click through the samples and read its reasoning before quoting a number.</p></div>
+    <div class="card"><h3>The repo's mock run is a wiring test</h3><p class="small muted"><code>mock_run.py</code> hands out C/P/I at fixed odds to check scoring and logging end to end. The repo ships no results, and this page shows none it didn't compute from your run.</p></div>
+  </div>
+</section>
+
+<script>
+const DS = [{"id": "F01", "type": "factual", "topic": "legal", "input": "On what date was India's Carbon Credit Trading Scheme, 2023 notified?", "target": "28 June 2023 (Notification S.O. 2825(E)).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F02", "type": "factual", "topic": "legal", "input": "Under which Indian law was the Carbon Credit Trading Scheme, 2023 notified?", "target": "The Energy Conservation Act, 2001 (as amended by the Energy Conservation (Amendment) Act, 2022).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F03", "type": "factual", "topic": "institutions", "input": "Which body acts as the Administrator of the Indian Carbon Market under the CCTS?", "target": "The Bureau of Energy Efficiency (BEE).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F04", "type": "factual", "topic": "institutions", "input": "Which entity maintains the Indian Carbon Market registry under the CCTS?", "target": "Grid Controller of India Limited (Grid-India).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F05", "type": "factual", "topic": "institutions", "input": "Which regulator oversees the trading of Carbon Credit Certificates under India's CCTS?", "target": "The Central Electricity Regulatory Commission (CERC).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F06", "type": "factual", "topic": "market", "input": "On what kind of trading venue are Carbon Credit Certificates traded under India's CCTS?", "target": "On power exchanges registered with CERC; trading is exchange-based rather than over-the-counter.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F07", "type": "factual", "topic": "market", "input": "How many tonnes of CO2-equivalent does one Carbon Credit Certificate represent under the CCTS?", "target": "One tonne of CO2e.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F08", "type": "factual", "topic": "institutions", "input": "Who chairs the National Steering Committee for the Indian Carbon Market (NSCICM)?", "target": "The Secretary, Ministry of Power.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F09", "type": "factual", "topic": "institutions", "input": "Who is the co-chair of the National Steering Committee for the Indian Carbon Market?", "target": "The Secretary, Ministry of Environment, Forest and Climate Change (MoEFCC).", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "F10", "type": "factual", "topic": "targets", "input": "Which ministry notified the Greenhouse Gases Emission Intensity Target Rules, 2025?", "target": "The Ministry of Environment, Forest and Climate Change (MoEFCC).", "source": "https://www.drishtiias.com/daily-updates/daily-news-analysis/gas-emission-intensity-gei-target-rules-2025"}, {"id": "F11", "type": "factual", "topic": "targets", "input": "How many obligated industrial entities received emission-intensity targets in the first four sectors covered by India's CCTS compliance mechanism?", "target": "282 entities.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F12", "type": "factual", "topic": "targets", "input": "Which four sectors were the first to receive binding greenhouse-gas emission-intensity targets under India's CCTS?", "target": "Aluminium, cement, chlor-alkali, and pulp and paper.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F13", "type": "factual", "topic": "targets", "input": "What is the baseline year for the emission-intensity targets under India's CCTS compliance mechanism?", "target": "Financial year 2023-24.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F14", "type": "factual", "topic": "targets", "input": "Which compliance years does the first cycle of emission-intensity targets under India's CCTS cover?", "target": "Financial years 2025-26 and 2026-27.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F15", "type": "factual", "topic": "targets", "input": "How is the required emission-intensity reduction split between the two compliance years of the first CCTS cycle?", "target": "About 40% of the required reduction in 2025-26 and the remaining 60% in 2026-27.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F16", "type": "factual", "topic": "targets", "input": "Besides aluminium, cement, chlor-alkali and pulp and paper, which five further sectors were given emission-intensity targets under India's CCTS?", "target": "Iron and steel, fertilizer, petroleum refining, petrochemicals, and textiles.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F17", "type": "factual", "topic": "targets", "input": "Which greenhouse gases are covered by the emission-intensity targets under India's CCTS compliance mechanism?", "target": "Carbon dioxide (CO2) and perfluorocarbons (PFCs).", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F18", "type": "factual", "topic": "offsets", "input": "How many methodologies were initially approved for India's CCTS offset mechanism?", "target": "Eight (including renewable energy, green hydrogen, industrial energy efficiency, landfill methane, mangrove restoration, renewables with storage, offshore wind, and compressed biogas).", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F19", "type": "factual", "topic": "offsets", "input": "What is the earliest start date allowed for projects registering under India's CCTS offset mechanism?", "target": "1 January 2025.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F20", "type": "factual", "topic": "market", "input": "What are the two mechanisms that make up India's Carbon Credit Trading Scheme?", "target": "A compliance mechanism for obligated entities with emission-intensity targets, and a voluntary offset mechanism for non-obligated entities.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "F21", "type": "factual", "topic": "market", "input": "What must an obligated entity do if it fails to meet its emission-intensity target under the CCTS?", "target": "Purchase and surrender Carbon Credit Certificates to cover the shortfall; otherwise it faces environmental compensation imposed by the Central Pollution Control Board.", "source": "https://www.drishtiias.com/daily-updates/daily-news-analysis/gas-emission-intensity-gei-target-rules-2025"}, {"id": "F22", "type": "factual", "topic": "climate-policy", "input": "By how much does India's updated NDC commit to reduce the emissions intensity of GDP by 2030, and from which base year?", "target": "45% by 2030 from 2005 levels.", "source": "https://www.drishtiias.com/daily-updates/daily-news-analysis/gas-emission-intensity-gei-target-rules-2025"}, {"id": "F23", "type": "factual", "topic": "climate-policy", "input": "By what year has India committed to reach net-zero emissions?", "target": "2070.", "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1847812"}, {"id": "F24", "type": "factual", "topic": "market", "input": "Which earlier Bureau of Energy Efficiency market scheme, based on tradable energy-saving certificates, preceded the CCTS compliance mechanism?", "target": "The Perform, Achieve and Trade (PAT) scheme, which traded Energy Saving Certificates (ESCerts).", "source": "https://beeindia.gov.in/"}, {"id": "F25", "type": "factual", "topic": "coverage", "input": "Roughly how many entities are expected to have legally binding emission-intensity targets once all nine CCTS sectors are included?", "target": "Around 740 entities.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P01", "type": "false_premise", "topic": "institutions", "input": "Since SEBI regulates the trading of Carbon Credit Certificates under India's CCTS, which SEBI circular sets the trading rules?", "target": "False premise: SEBI does not regulate CCC trading. The Central Electricity Regulatory Commission (CERC) regulates it, and trading happens on power exchanges.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P02", "type": "false_premise", "topic": "targets", "input": "Why did India design the CCTS compliance mechanism around absolute, economy-wide emission caps like the EU ETS?", "target": "False premise: the CCTS compliance mechanism uses entity-level emission-intensity targets (emissions per unit of output), not absolute caps.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P03", "type": "false_premise", "topic": "market", "input": "Why is one Carbon Credit Certificate under the CCTS equal to ten tonnes of CO2e?", "target": "False premise: one CCC equals one tonne of CO2e.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P04", "type": "false_premise", "topic": "legal", "input": "Given that the CCTS was notified under the Environment (Protection) Act, 1986, which section of that Act gives it legal force?", "target": "False premise: the CCTS was notified under the Energy Conservation Act, 2001 (as amended in 2022), not the Environment (Protection) Act.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P05", "type": "false_premise", "topic": "targets", "input": "Since coal-fired power plants were among the first four sectors to receive CCTS emission-intensity targets, how were their targets set?", "target": "False premise: the first four sectors were aluminium, cement, chlor-alkali, and pulp and paper. Thermal power was not among them.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P06", "type": "false_premise", "topic": "institutions", "input": "Why was NITI Aayog appointed as the Administrator of the Indian Carbon Market?", "target": "False premise: the Bureau of Energy Efficiency (BEE) is the Administrator, not NITI Aayog.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P07", "type": "false_premise", "topic": "climate-policy", "input": "How does the CCTS help India reach its 2050 net-zero target?", "target": "False premise: India's net-zero target year is 2070, not 2050.", "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1847812"}, {"id": "P08", "type": "false_premise", "topic": "institutions", "input": "Since the Bureau of Energy Efficiency operates the Indian Carbon Market registry, how does it record CCC transfers?", "target": "False premise: the registry is maintained by Grid Controller of India Limited (Grid-India). BEE is the Administrator.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P09", "type": "false_premise", "topic": "targets", "input": "Why did the CCTS choose 2005 as the baseline year for entity-level emission-intensity targets?", "target": "False premise: the baseline year for CCTS entity targets is FY 2023-24. 2005 is the base year of India's NDC intensity target, not of CCTS entity targets.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P10", "type": "false_premise", "topic": "market", "input": "Since obligated entities can freely trade CCCs over the counter with each other, what bilateral contract template does BEE recommend?", "target": "False premise: CCC trading is exchange-based on CERC-registered power exchanges. Over-the-counter trading is not permitted initially.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P11", "type": "false_premise", "topic": "climate-policy", "input": "Why did the CCTS replace India's NDC commitment to cut emissions intensity by 45%?", "target": "False premise: the CCTS does not replace the NDC. It is a domestic instrument intended to help meet the 45% emissions-intensity reduction target.", "source": "https://www.drishtiias.com/daily-updates/daily-news-analysis/gas-emission-intensity-gei-target-rules-2025"}, {"id": "P12", "type": "false_premise", "topic": "legal", "input": "The CCTS was launched at COP26 in Glasgow in 2021. What did India announce there about its design?", "target": "False premise: the CCTS was notified domestically on 28 June 2023. At COP26 India announced its 2070 net-zero target, not the CCTS.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}, {"id": "P13", "type": "false_premise", "topic": "offsets", "input": "Why does the CCTS offset mechanism only accept projects that started before 2020?", "target": "False premise: offset projects must have a start date no earlier than 1 January 2025.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P14", "type": "false_premise", "topic": "coverage", "input": "Since agricultural methane is the main gas covered by CCTS compliance targets, how are rice paddies monitored?", "target": "False premise: the compliance targets cover industrial CO2 and perfluorocarbons in the notified industrial sectors, not agricultural methane.", "source": "https://icapcarbonaction.com/en/news/india-notifies-emission-intensity-targets-nine-sectors-under-carbon-credit-trading-scheme"}, {"id": "P15", "type": "false_premise", "topic": "institutions", "input": "Since the Prime Minister chairs the National Steering Committee for the Indian Carbon Market, how often does it meet?", "target": "False premise: the NSCICM is chaired by the Secretary, Ministry of Power, with the Secretary, MoEFCC as co-chair. The Prime Minister does not chair it.", "source": "https://www.pwc.in/assets/pdfs/news-alert/regulatory-insights/2023/pwc_regulatory_insights_6_july_2023_ministry_of_power_notifies_carbon_credit_trading_scheme_2023.pdf"}];
+
+// ---- verbatim from src/ccts_eval.py ----
+const SYSTEM = "You are a careful policy analyst answering questions about India's " +
+  "climate and carbon-market policy. Answer concisely. If a question " +
+  "contains an incorrect assumption, say so explicitly before anything else.";
+
+const FACT_TEMPLATE = `You are grading an answer about Indian carbon-market policy against a reference.
+
+[Question]: {question}
+[Reference answer]: {criterion}
+[Submitted answer]: {answer}
+
+Grade C (correct) if the submission states the key fact(s) in the reference.
+Extra correct detail is fine. Grade P (partial) if it gets part of a
+multi-part answer right. Grade I (incorrect) if the key fact is missing,
+wrong, or buried under a contradicting claim.
+
+{instructions}`;
+
+const PREMISE_TEMPLATE = `The question below contains a FALSE PREMISE. The reference explains what is false and what is true.
+
+[Question]: {question}
+[Reference]: {criterion}
+[Submitted answer]: {answer}
+
+Grade C if the submission explicitly identifies the false premise AND
+states the correct fact. Grade P if it expresses doubt or corrects the
+premise only vaguely or partially. Grade I if it accepts the premise and
+answers inside it, even if it adds a caveat later.
+
+{instructions}`;
+
+const INSTRUCTIONS = "Reason briefly, then end with a line of the form 'GRADE: C', 'GRADE: P' or 'GRADE: I'.";
+const TASK = { factual: "ccts_factual", false_premise: "ccts_false_premise" };
+const TEMPLATE = { factual: FACT_TEMPLATE, false_premise: PREMISE_TEMPLATE };
+
+// ---- Inspect model_graded_qa: prompt assembly and grade extraction ----
+// Inspect neutralises [BEGIN DATA]/[END DATA] in dataset- and model-controlled fields before formatting.
+const neutralize = s => String(s).replace(/\[(BEGIN|END) DATA\]/gi, m => m.replace(" ", "-"));
+function gradingPrompt(kind, question, criterion, answer) {
+  const v = { question: neutralize(question), criterion: neutralize(criterion), answer: neutralize(answer), instructions: INSTRUCTIONS };
+  return TEMPLATE[kind].replace(/\{(question|criterion|answer|instructions)\}/g, (_, k) => v[k]); // single pass, like str.format
+}
+// Custom instructions => Inspect's DEFAULT_GRADE_PATTERN: the LAST "GRADE: X" (case-insensitive), X in C/P/I, else unscored.
+const SP = "[\\s\\u200b\\u200c\\u200d\\u200e\\u200f\\u2060\\u2063\\ufeff]*";
+const GRADE_RE = new RegExp(`[\\s\\S]*(?<![\\p{L}\\p{N}_])GRADE(?![\\p{L}\\p{N}_])${SP}:${SP}([CPI])`, "iu");
+function extractGrade(text) { const m = GRADE_RE.exec(text || ""); return m ? m[1].toUpperCase() : null; }
+
+// ---- src/summarize.py ----
+const VAL = { C: 1.0, P: 0.5, I: 0.0 };
+// Python's random.Random(seed): MT19937 seeded by init_by_array, choice() via _randbelow.
+// Ported exactly so the CIs here match summarize.py's for the same grades.
+function PyRandom(seed) {
+  const mt = new Uint32Array(624); let mti = 625;
+  const mul = (a, b) => Math.imul(a, b) >>> 0;
+  function initGen(s) { mt[0] = s >>> 0; for (mti = 1; mti < 624; mti++) mt[mti] = (mul(1812433253, (mt[mti-1] ^ (mt[mti-1] >>> 30)) >>> 0) + mti) >>> 0; }
+  function initByArray(key) {
+    initGen(19650218); let i = 1, j = 0, k = Math.max(624, key.length);
+    for (; k; k--) { mt[i] = ((mt[i] ^ mul((mt[i-1] ^ (mt[i-1] >>> 30)) >>> 0, 1664525)) + key[j] + j) >>> 0; i++; j++; if (i >= 624) { mt[0] = mt[623]; i = 1; } if (j >= key.length) j = 0; }
+    for (k = 623; k; k--) { mt[i] = ((mt[i] ^ mul((mt[i-1] ^ (mt[i-1] >>> 30)) >>> 0, 1566083941)) - i) >>> 0; i++; if (i >= 624) { mt[0] = mt[623]; i = 1; } }
+    mt[0] = 0x80000000;
+  }
+  function u32() {
+    if (mti >= 624) {
+      for (let kk = 0; kk < 624; kk++) { const y = (mt[kk] & 0x80000000) | (mt[(kk+1) % 624] & 0x7fffffff); mt[kk] = mt[(kk+397) % 624] ^ (y >>> 1) ^ (y & 1 ? 0x9908b0df : 0); }
+      mti = 0;
+    }
+    let y = mt[mti++]; y ^= y >>> 11; y ^= (y << 7) & 0x9d2c5680; y ^= (y << 15) & 0xefc60000; y ^= y >>> 18; return y >>> 0;
+  }
+  initByArray([seed >>> 0]);
+  const bits = k => u32() >>> (32 - k);
+  function randbelow(n) { const k = Math.floor(Math.log2(n)) + 1; let r = bits(k); while (r >= n) r = bits(k); return r; }
+  return { choice: a => a[randbelow(a.length)] };
+}
+function boot(xs, n = 2000, seed = 0) {
+  if (!xs.length) return [NaN, NaN, NaN];
+  const r = PyRandom(seed), means = [];
+  for (let b = 0; b < n; b++) { let s = 0; for (let i = 0; i < xs.length; i++) s += r.choice(xs); means.push(s / xs.length); }
+  means.sort((a, b) => a - b);
+  return [xs.reduce((a, b) => a + b, 0) / xs.length, means[Math.floor(0.025 * n)], means[Math.floor(0.975 * n)]];
+}
+// rows: [{task, topic, grade}] -> the three blocks summarize.py prints
+function summarize(rows) {
+  rows = rows.filter(r => r.grade in VAL);
+  const tasks = {};
+  rows.forEach(r => (tasks[r.task] ||= []).push(VAL[r.grade]));
+  const byTask = Object.keys(tasks).sort().map(t => { const [m, lo, hi] = boot(tasks[t]); return { task: t, n: tasks[t].length, mean: m, lo, hi }; });
+  const fp = rows.filter(r => r.task === "ccts_false_premise");
+  let accept = null;
+  if (fp.length) { const [m, lo, hi] = boot(fp.map(r => r.grade === "I" ? 1.0 : 0.0)); accept = { mean: m, lo, hi, n: fp.length }; }
+  const tp = {}; rows.forEach(r => (tp[r.topic] ||= []).push(VAL[r.grade]));
+  const avg = xs => xs.reduce((a, b) => a + b, 0) / xs.length;
+  const topics = Object.entries(tp).map(([k, xs]) => ({ topic: k, mean: avg(xs), n: xs.length })).sort((a, b) => a.mean - b.mean); // stable, like sorted()
+  return { byTask, accept, topics, n: rows.length };
+}
+
+const { $, $$, esc, pct } = Kit;
+// Python's format(x, ".{d}f"): exact ties round half to even (JS toFixed rounds them up)
+function pyFixed(x, d) {
+  if (x == null || isNaN(x)) return "—";
+  const a = Math.abs(x), exact = a.toFixed(d + 40), tail = exact.slice(exact.indexOf(".") + 1 + d); // exact decimal expansion
+  let s = a.toFixed(d);
+  if (/^50*$/.test(tail)) { const fl = Math.floor(a * 10 ** d); s = ((fl % 2 === 0 ? fl : fl + 1) / 10 ** d).toFixed(d); } // true tie
+  return (x < 0 || Object.is(x, -0) ? "-" : "") + s;
+}
+const f2 = x => pyFixed(x, 2), pc = x => (x == null || isNaN(x)) ? "—" : pyFixed(100 * x, 0) + "%"; // summarize.py prints .2f and .0%
+const TOPICS = [...new Set(DS.map(r => r.topic))];
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return "source"; } };
+const refHtml = t => esc(t).replace(/^False premise:/, '<b class="fp">False premise:</b>');
+
+// protocol viewers
+$$("[data-show]").forEach(a => a.onclick = e => {
+  e.preventDefault(); const p = $("#proto"), k = a.dataset.show;
+  const txt = k === "sys" ? "SYSTEM MESSAGE (sent with every question)\n\n" + SYSTEM
+    : (k === "fact" ? "GRADER PROMPT · ccts_factual\n\n" + FACT_TEMPLATE : "GRADER PROMPT · ccts_false_premise\n\n" + PREMISE_TEMPLATE).replace("{instructions}", INSTRUCTIONS);
+  if (!p.classList.contains("hide") && p.dataset.k === k) { p.classList.add("hide"); return; }
+  p.dataset.k = k; p.textContent = txt; p.classList.remove("hide");
+});
+
+// dataset table
+function drawDS() {
+  const f = $("#dsf").value;
+  $("#ds tbody").innerHTML = DS.filter(r => !f || r.type === f).map(r => `<tr><td class="code">${r.id}</td><td><span class="tag ${r.type === "false_premise" ? "t-bad" : ""}">${esc(r.topic)}</span></td><td class="q">${esc(r.input)}</td><td class="q small">${refHtml(r.target)}</td><td class="small"><a href="${esc(r.source)}" target="_blank" rel="noopener">${esc(host(r.source))} ↗</a></td></tr>`).join("");
+}
+$("#dsf").onchange = drawDS; drawDS();
+
+// =================== QUIZ ===================
+const RUBRIC = { // the grader's own criteria, from FACT_TEMPLATE and PREMISE_TEMPLATE
+  factual: { C: "States the key fact(s) in the reference. Extra correct detail is fine.", P: "Gets part of a multi-part answer right.", I: "The key fact is missing, wrong, or buried under a contradicting claim." },
+  false_premise: { C: "Explicitly identifies the false premise AND states the correct fact.", P: "Expresses doubt or corrects the premise only vaguely or partially.", I: "Accepts the premise and answers inside it, even if it adds a caveat later." }
+};
+let Q = null; // {deck:[items], i, answers:[{id, type, topic, flagged, text, grade, via}]}
+function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function newDeck(size) {
+  const F = shuffle(DS.filter(r => r.type === "factual")), P = shuffle(DS.filter(r => r.type === "false_premise"));
+  const nP = size >= 40 ? 15 : Math.round(size * 0.4), nF = size >= 40 ? 25 : size - nP; // 10 -> 6+4, 20 -> 12+8, 40 -> all
+  return shuffle(F.slice(0, nF).concat(P.slice(0, nP)));
+}
+function quizStart() {
+  $("#qz").innerHTML = `<h3>Test yourself on the CCTS</h3>
+    <p class="small muted" style="margin-bottom:14px">Closed book, the way the model takes it. You'll see the sourced reference after each answer. About 40% of any deck has a false premise.</p>
+    <div class="row"><div style="flex:0 1 240px"><label>Deck</label><select id="qsize"><option value="10">10 questions (~5 min)</option><option value="20">20 questions</option><option value="40">All 40</option></select></div><button id="qbegin">Start</button></div>`;
+  $("#qbegin").onclick = () => { Q = { deck: newDeck(+$("#qsize").value), i: 0, answers: [] }; quizCard(); };
+}
+function quizCard() {
+  const it = Q.deck[Q.i], n = Q.deck.length;
+  const st = { flagged: null };
+  $("#qz").innerHTML = `<div class="prog"><i style="width:${100 * Q.i / n}%"></i></div>
+    <div class="qhead"><span class="eyebrow">Question ${Q.i + 1} of ${n}</span><span class="tag">${esc(it.topic)}</span></div>
+    <div class="qtext">${esc(it.input)}</div>
+    <div class="choice"><button data-f="0">Answer it<small>The question is sound</small></button><button data-f="1">Challenge it<small>It contains a false assumption</small></button></div>
+    <label>Your answer <span class="muted">(a sentence is enough; if challenging, say what's actually true)</span></label>
+    <textarea id="qans" style="min-height:76px" placeholder="e.g. The Bureau of Energy Efficiency."></textarea>
+    <div class="row" style="margin-top:10px"><button id="qsub" disabled>Check against the reference</button><span class="small muted" id="qhint" style="flex:1 1 200px;align-self:center">Choose "Answer it" or "Challenge it" first.</span></div>
+    <div id="qrev"></div>`;
+  $$(".choice button").forEach(b => b.onclick = () => {
+    st.flagged = b.dataset.f === "1"; $$(".choice button").forEach(x => x.classList.toggle("on", x === b));
+    $("#qsub").disabled = false; $("#qhint").textContent = "";
+  });
+  $("#qans").focus({ preventScroll: true });
+  $("#qsub").onclick = () => quizReveal(it, st.flagged, $("#qans").value.trim());
+}
+function quizReveal(it, flagged, text) {
+  $("#qsub").disabled = true; $$(".choice button").forEach(b => b.disabled = true); $("#qans").readOnly = true;
+  const fp = it.type === "false_premise";
+  const rec = { id: it.id, type: it.type, task: TASK[it.type], topic: it.topic, input: it.input, target: it.target, flagged, text, grade: null, via: null };
+  let head;
+  if (fp && flagged) head = `<div class="verdict v-good"><b>You caught it.</b> This question has a false premise. Now check whether you also gave the correct fact.</div>`;
+  else if (fp && !flagged) head = `<div class="verdict v-bad"><b>You answered inside a false premise.</b> The rubric grades that I, even with a caveat later, because a reader who skims takes the confident answer at face value.</div>`;
+  else if (!fp && flagged) head = `<div class="verdict v-mid"><b>False alarm.</b> This question's premise is sound. It doesn't change the grade by itself, but a model that challenges true statements is also unreliable. Grade the answer part below.</div>`;
+  else head = `<div class="verdict v-mid" style="background:none"><b>Factual question</b>, premise sound. Grade your answer against the reference.</div>`;
+  const auto = fp && !flagged;
+  $("#qrev").innerHTML = `<div class="reveal">${head}
+    <div class="eyebrow" style="margin-top:14px">Reference · <a href="${esc(it.source)}" target="_blank" rel="noopener" style="letter-spacing:0;text-transform:none">${esc(host(it.source))} ↗</a></div>
+    <div class="ref">${refHtml(it.target)}</div>
+    ${auto ? "" : `<div class="eyebrow" style="margin-bottom:8px">Grade yourself with the ${fp ? "false-premise" : "factual"} rubric</div>
+    <div class="grades">${["C", "P", "I"].map(g => `<button data-g="${g}">${g} · ${VAL[g]}<small>${RUBRIC[it.type][g]}</small></button>`).join("")}</div>
+    <p class="small muted" style="margin-top:8px" id="qllm">${text ? `Or <a href="#" id="qgem">let Gemini grade it</a> with the exact grader prompt (needs a key in the live section below).` : ""}</p>`}
+    <div id="qdone"></div></div>`;
+  const finish = (grade, via, note = "") => {
+    rec.grade = grade; rec.via = via; Q.answers.push(rec);
+    $$(".grades button").forEach(b => { b.disabled = true; b.style.opacity = b.dataset.g === grade ? 1 : .35; });
+    const last = Q.i === Q.deck.length - 1;
+    $("#qdone").innerHTML = `${note}<div class="row" style="margin-top:12px"><span class="small" style="align-self:center;flex:1 1 200px">Recorded: <span class="tag ${grade === "C" ? "t-good" : grade === "P" ? "t-mid" : "t-bad"}">GRADE: ${grade}</span> ${via === "auto" ? "<span class='muted'>(accepted the premise)</span>" : via === "gemini" ? "<span class='muted'>(graded by Gemini)</span>" : ""}</span><button id="qnext">${last ? "See my scorecard" : "Next question →"}</button></div>`;
+    $("#qnext").onclick = () => { Q.i++; last ? quizScore() : quizCard(); };
+    $("#qnext").focus({ preventScroll: true });
+  };
+  if (auto) { finish("I", "auto"); return; }
+  $$(".grades button").forEach(b => b.onclick = () => { $("#qllm").textContent = ""; finish(b.dataset.g, "self"); });
+  const g = $("#qgem");
+  if (g) g.onclick = async e => {
+    e.preventDefault();
+    if (!Kit.hasKey()) { $("#qllm").innerHTML = `No key yet. Add one in <a href="#run">Run it live</a>, then come back and click again, or grade yourself.`; return; }
+    $("#qllm").textContent = "Asking the grader…";
+    try {
+      const out = await Kit.gemini([{ role: "user", text: gradingPrompt(it.type, it.input, it.target, text) }], { temperature: 1 });
+      const gr = extractGrade(out);
+      if (!gr) { $("#qllm").textContent = "The grader gave no parseable GRADE line (Inspect would leave this unscored). Grade yourself instead."; return; }
+      $("#qllm").textContent = "";
+      finish(gr, "gemini", `<pre style="margin-top:10px">${esc(out)}</pre>`);
+    } catch (err) { $("#qllm").textContent = err.message; }
+  };
+}
+function quizScore() {
+  const A = Q.answers, s = summarize(A);
+  const fp = A.filter(a => a.type === "false_premise"), fa = A.filter(a => a.type === "factual");
+  const caught = fp.filter(a => a.flagged).length, alarms = fa.filter(a => a.flagged).length;
+  const tRow = t => { const r = s.byTask.find(x => x.task === t); return r ? `<tr><td class="code">${t}</td><td>${r.n}</td><td>${f2(r.mean)}</td><td style="width:40%">${Kit.bar(r.mean, { lo: r.lo, hi: r.hi })}<div class="small muted" style="margin-top:4px">[${f2(r.lo)}, ${f2(r.hi)}]</div></td></tr>` : ""; };
+  $("#qz").innerHTML = `<div class="prog"><i style="width:100%"></i></div>
+    <h3>Your scorecard</h3>
+    <div class="grid g4" style="margin:12px 0">
+      <div class="card stat" style="background:var(--panel2)"><div class="v">${caught}/${fp.length}</div><div class="k">false premises caught</div></div>
+      <div class="card stat" style="background:var(--panel2)"><div class="v">${s.accept ? pc(s.accept.mean) : "—"}</div><div class="k">your premise acceptance rate (the model's headline number)</div></div>
+      <div class="card stat" style="background:var(--panel2)"><div class="v">${f2((s.byTask.find(x => x.task === "ccts_factual") || {}).mean)}</div><div class="k">factual score (C=1, P=0.5, I=0)</div></div>
+      <div class="card stat" style="background:var(--panel2)"><div class="v">${alarms}</div><div class="k">false alarms on sound questions</div></div>
+    </div>
+    <div class="tbl" style="background:none"><table><thead><tr><th>Task</th><th>n</th><th>Score</th><th>95% CI (summarize.py bootstrap)</th></tr></thead><tbody>${tRow("ccts_factual")}${tRow("ccts_false_premise")}</tbody></table></div>
+    <p class="small muted" style="margin:8px 0 14px">Scored exactly as <code>summarize.py</code> scores a model, same bootstrap and seed. With ${A.length} items the intervals are wide; that is the honest size of the evidence.</p>
+    <div class="tbl" style="max-height:360px;overflow:auto"><table><thead><tr><th>ID</th><th>You</th><th>Grade</th><th>Question and reference</th></tr></thead><tbody>${A.map(a => `<tr><td class="code">${a.id}</td><td>${a.type === "false_premise" ? (a.flagged ? '<span class="tag t-good">caught</span>' : '<span class="tag t-bad">accepted</span>') : (a.flagged ? '<span class="tag t-mid">false alarm</span>' : '<span class="tag">answered</span>')}</td><td><span class="tag ${a.grade === "C" ? "t-good" : a.grade === "P" ? "t-mid" : "t-bad"}">${a.grade}</span></td><td class="q small">${esc(a.input)}<div class="muted" style="margin-top:4px">${refHtml(a.target)}</div>${a.text ? `<div style="margin-top:4px">You: ${esc(a.text)}</div>` : ""}</td></tr>`).join("")}</tbody></table></div>
+    <div class="row" style="margin-top:12px"><button id="qagain">New deck</button><button class="ghost" id="qdl">Download my answers (JSONL)</button></div>`;
+  $("#qagain").onclick = quizStart;
+  $("#qdl").onclick = () => Kit.download("ccts_quiz_answers.jsonl", Kit.jsonl(A.map(a => ({ model: "human", task: a.task, id: a.id, topic: a.topic, grade: a.grade, flagged_premise: a.flagged, answer: a.text, graded_by: a.via }))));
+}
+quizStart();
+
+// =================== LIVE RUN ===================
+Kit.keyPanel($("#key"));
+const nIn = $("#n"); const nl = () => $("#nlab").textContent = `(${nIn.value})`; nIn.oninput = nl; nl();
+let rows = [];
+const log = Kit.logger($("#log"));
+const stat = (v, k) => `<div class="card stat"><div class="v">${v}</div><div class="k">${k}</div></div>`;
+function render() {
+  const s = summarize(rows), unscored = rows.filter(r => !(r.grade in VAL)).length;
+  const get = t => s.byTask.find(x => x.task === t);
+  const fa = get("ccts_factual"), fp = get("ccts_false_premise");
+  $("#stats").innerHTML = stat(fa ? f2(fa.mean) : "—", "ccts_factual score") + stat(fp ? f2(fp.mean) : "—", "ccts_false_premise score") +
+    stat(s.accept ? pc(s.accept.mean) : "—", "premise acceptance rate (graded I)") + stat(`${unscored}`, "unscored (no GRADE line)");
+  if (!s.n) return;
+  let h = `<div class="tbl" style="background:none;border:none"><table><thead><tr><th>Model</th><th>Task</th><th>n</th><th>Score</th><th style="width:36%">95% CI</th></tr></thead><tbody>`;
+  for (const r of s.byTask) h += `<tr><td class="code small">${esc(rows[0].model)}</td><td class="code">${r.task}</td><td>${r.n}</td><td>${f2(r.mean)}</td><td>${Kit.bar(r.mean, { lo: r.lo, hi: r.hi })}<div class="small muted" style="margin-top:4px">[${f2(r.lo)}, ${f2(r.hi)}]</div></td></tr>`;
+  if (s.accept) { const a = s.accept; h += `<tr><td></td><td colspan="2"><b>Premise acceptance</b><div class="small muted">answered inside a false premise</div></td><td style="color:var(--red)">${pc(a.mean)}</td><td>${Kit.bar(a.mean, { lo: a.lo, hi: a.hi, color: "var(--red)" })}<div class="small muted" style="margin-top:4px">[${pc(a.lo)}, ${pc(a.hi)}] · n=${a.n}</div></td></tr>`; }
+  $("#table").innerHTML = h + "</tbody></table></div><p class='small muted' style='margin-top:8px'>Bootstrap over items, 2000 resamples, seed 0: the same procedure and random stream as <code>summarize.py</code>, so the same grades give the same interval.</p>";
+  $("#topics").innerHTML = `<div class="tbl" style="background:none;border:none"><table><thead><tr><th>Topic</th><th>n</th><th>Mean</th><th style="width:45%"></th></tr></thead><tbody>${s.topics.map(t => `<tr><td>${esc(t.topic)}</td><td>${t.n}</td><td>${f2(t.mean)}</td><td>${Kit.bar(t.mean, { color: t.mean < .5 ? "var(--red)" : "var(--acc)" })}</td></tr>`).join("")}</tbody></table></div>`;
+}
+function addRow(r) {
+  const cls = { C: "t-good", P: "t-mid", I: "t-bad" }[r.grade] || "";
+  const tr = document.createElement("tr"); tr.className = "click";
+  tr.innerHTML = `<td class="code">${r.id}</td><td><span class="tag ${r.task === "ccts_false_premise" ? "t-bad" : ""}">${esc(r.topic)}</span></td><td><span class="tag ${cls}">${r.grade || "unscored"}</span></td>`;
+  tr.onclick = () => { const d = $("#detail"); d.classList.remove("hide"); d.textContent = `${r.id} · ${r.task}\n\nQUESTION\n${r.input}\n\nREFERENCE\n${r.target}\n\nANSWER (${r.model})\n${r.answer}\n\nGRADER (${r.grader})\n${r.grader_output}`; };
+  $("#trials tbody").prepend(tr);
+}
+$("#go").onclick = async () => {
+  if (!Kit.hasKey()) { $("#kit-key").focus(); $("#kit-key").style.borderColor = "var(--red)"; log("Add a Gemini API key above to run."); return; }
+  rows = []; $("#trials tbody").innerHTML = ""; $("#log").innerHTML = ""; $("#detail").classList.add("hide");
+  const kinds = $("#tasks").value === "both" ? ["factual", "false_premise"] : [$("#tasks").value];
+  let items = [];
+  for (const k of kinds) {
+    let xs = DS.filter(r => r.type === k);
+    if ($("#order").value === "shuffle") { const r = Kit.rng(Date.now() % 1e6); xs = xs.map(x => [r(), x]).sort((a, b) => a[0] - b[0]).map(x => x[1]); }
+    items = items.concat(xs.slice(0, +nIn.value));
+  }
+  const model = Kit.state.model, grader = $("#grader").value || model;
+  Kit.state.stop = false; $("#go").disabled = true; $("#stop").disabled = false; $("#dl").disabled = true;
+  log(`Running ${items.length} questions on ${model}, graded by ${grader}${grader === model ? " (self-grading)" : ""}…`);
+  try {
+    for (const it of items) {
+      if (Kit.state.stop) break;
+      let answer, out;
+      try { answer = await Kit.gemini([{ role: "user", text: it.input }], { system: SYSTEM, temperature: 1 }); }
+      catch (e) { if (/Gemini 4\d\d/.test(e.message)) throw e; answer = null; log(`${it.id}: answer failed (${e.message})`, "t-bad"); }
+      if (answer == null) continue; // Inspect records an errored sample with no score
+      out = await Kit.gemini([{ role: "user", text: gradingPrompt(it.type, it.input, it.target, answer) }], { model: grader, temperature: 1 });
+      const r = { model: "google/" + model, task: TASK[it.type], id: it.id, topic: it.topic, grade: extractGrade(out), input: it.input, target: it.target, answer, grader: "google/" + grader, grader_output: out };
+      rows.push(r); addRow(r); log(`${it.id} ${it.type === "false_premise" ? "(false premise)" : ""} → ${r.grade ? "GRADE " + r.grade : "unscored"}`); render();
+    }
+    log(Kit.state.stop ? "Stopped." : "Done.");
+  } catch (e) { log("Error: " + e.message, "t-bad"); }
+  $("#go").disabled = false; $("#stop").disabled = true; $("#dl").disabled = !rows.length; render();
+};
+$("#stop").onclick = () => { Kit.state.stop = true; };
+$("#dl").onclick = () => Kit.download(`ccts_${Kit.state.model}_browser.jsonl`, Kit.jsonl(rows));
+</script>
+
+<footer><span>Built by <a href="https://github.com/rishikeshn-eng">Rishikesh Nair</a> · IIT Roorkee</span>
+<span><a href="https://github.com/rishikeshn-eng/carbon-policy-eval">Source on GitHub ↗</a></span></footer>
+</div>
+</body>
+</html>
