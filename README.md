@@ -1,6 +1,4 @@
-hello
-  world
-line3# carbon-policy-eval
+# carbon-policy-eval
 
 Do language models actually know India's carbon market? And when a question
 gets the facts wrong, do they correct it or answer inside it?
